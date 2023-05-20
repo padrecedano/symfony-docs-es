@@ -108,3 +108,54 @@ ejecutar este comando que muestra información sobre el proyecto:
 .. code-block:: terminal
 
 	$ php bin/console about
+	
+	
+Ejecutar aplicaciones de Symfony
+----------------------------
+
+En producción, debes instalar un servidor web como Nginx o Apache y :doc:`configurarlo para ejecutar Symfony </setup/web_server_configuration>`. Este método también se puede usar si no estás usando el servidor web local de Symfony para el desarrollo.
+
+Sin embargo, para el desarrollo local, la forma más conveniente de ejecutar Symfony es usar el :doc:`servidor web local </setup/symfony_server>` provisto por el binario de ``symfony``. Este servidor local proporciona, entre otras cosas, soporte para HTTP/2, solicitudes concurrentes, TLS/SSL y generación automática de certificados de seguridad.
+
+Abre tu terminal de consola, muévete a tu nuevo directorio de proyectos e inicia el servidor web local de la siguiente manera:
+
+.. code-block:: terminal
+
+    $ cd my-project/
+    $ symfony server:start
+    
+Abre tu navegador y navega hasta ``http://localhost:8000/``. Si todo funciona, verás una página de bienvenida. Más tarde, cuando hayas terminado de trabajar, detén el servidor presionando ``Ctrl+C`` desde tu terminal.
+
+.. tip::
+
+El servidor web funciona con cualquier aplicación PHP, no solo con proyectos Symfony, por lo que es una herramienta de desarrollo genérica muy útil.
+
+Integración con Symfony Docker
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Si deseas utilizar Docker con Symfony, consulta :doc:`Uso de Docker con Symfony </setup/docker>`.
+
+.. _symfony-flex:
+
+
+.. _`Harmonious Development with Symfony`: https://symfonycasts.com/screencast/symfony
+.. _`Install Composer`: https://getcomposer.org/download/
+.. _`install Symfony CLI`: https://symfony.com/download
+.. _`symfony-cli/symfony-cli GitHub repository`: https://github.com/symfony-cli/symfony-cli
+.. _`The Symfony Demo Application`: https://github.com/symfony/demo
+.. _`Symfony Flex`: https://github.com/symfony/flex
+.. _`PHP security advisories database`: https://github.com/FriendsOfPHP/security-advisories
+.. _`Local PHP Security Checker`: https://github.com/fabpot/local-php-security-checker
+.. _`Symfony releases`: https://symfony.com/releases
+.. _`Main recipe repository`: https://github.com/symfony/recipes
+.. _`Contrib recipe repository`: https://github.com/symfony/recipes-contrib
+.. _`Symfony Recipes documentation`: https://github.com/symfony/recipes/blob/master/README.rst
+.. _`iconv`: https://www.php.net/book.iconv
+.. _`Session`: https://www.php.net/book.session
+.. _`Ctype`: https://www.php.net/book.ctype
+.. _`Tokenizer`: https://www.php.net/book.tokenizer
+.. _`SimpleXML`: https://www.php.net/book.simplexml
+.. _`PCRE`: https://www.php.net/book.pcre
+
+
+
